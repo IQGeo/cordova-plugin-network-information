@@ -190,7 +190,7 @@ static void CDVReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRe
 {
     CDVPrintReachabilityFlags(flags, "localWiFiStatusForFlags");
 
-    BOOL retVal = NotReachable;
+    NetworkStatus retVal = NotReachable;
     if ((flags & kSCNetworkReachabilityFlagsReachable) && (flags & kSCNetworkReachabilityFlagsIsDirect)) {
         retVal = ReachableViaWiFi;
     }
